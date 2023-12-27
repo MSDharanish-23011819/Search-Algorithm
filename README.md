@@ -19,31 +19,95 @@ To write a program to perform linear search and binary search using python progr
 ## Program:
 i)	#Use a linear search method to match the item in a list.
 ```
+ 
+Program for linear search method to match the item in a list
+Developed by: Dharanish MS
+RegisterNumber:23011819 
 
-
-
+def linearSearch(array,n,k):
+    for i in range(n):
+        if array[i]==k:
+            return i
+    return -1        
+array = eval(input())
+array.sort()
+k = eval(input())
+n=len(array)
+print(array)
+result = linearSearch(array,n,k)
+if result==-1:
+    print("Element not found")
+else:
+    print("Element found at index: ",result)
 ```
 ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
 
+Program to find the element in a list using Binary Search(Iterative Method)..
+Developed by: Dharanish MS
+RegisterNumber:23011819 
 
-
-
+def binarySearchIter(array, k, low, high):
+    while low<=high:
+        mid=low+(high-low)//2
+        if array[mid]==k:
+            return mid
+        elif array[mid]<k:
+            low=mid+1
+        else:
+            high=mid-1
+    return -1        
+array=eval(input())
+array.sort()
+k = eval(input())
+print(array)
+result=binarySearchIter(array,k,0,len(array)-1)
+if result==-1:
+    print("Element not found")
+else:
+    print("Element found at index: ",result)
 
 ```
 iii)	# Find the element in a list using Binary Search (recursive Method).
 ```
+ 
+Program to find the element in a list using Binary Search (recursive Method).
+Developed by: MS Dharanish
+RegisterNumber: 23011819
 
-
-
-
-
+def binarySearchIter(array, k, low, high):
+    while low<=high:
+        mid=low+(high-low)//2
+        if array[mid]==k:
+            return mid
+        elif array[mid]<k:
+            low=mid+1
+        else:
+            high=mid-1
+    return -1        
+array=eval(input())
+array.sort()
+k = eval(input())
+print(array)
+result=binarySearchIter(array,k,0,len(array)-1)
+if result==-1:
+    print("Element not found")
+else:
+    print("Element found at index: ",result)
 ```
-## Sample Input and Output
+## Output:
+i)	#Use a linear search method to match the item in a list.
+
+![Screenshot 2023-12-27 211757](https://github.com/MSDharanish-23011819/Search-Algorithm/assets/147139454/cd78ac57-221b-42e6-8237-1f4b8cf1fe0d)
 
 
+ii)	# Find the element in a list using Binary Search(Iterative Method).
+![Screenshot 2023-12-27 211841](https://github.com/MSDharanish-23011819/Search-Algorithm/assets/147139454/c100ffcb-7c09-4fab-a752-fe8ada770ff7)
 
 
+iii)	# Find the element in a list using Binary Search (recursive Method).
+
+![Screenshot 2023-12-27 211949](https://github.com/MSDharanish-23011819/Search-Algorithm/assets/147139454/e5982ec6-e16a-4f13-8cf8-c640a740114d)
 
 
 ## Result
